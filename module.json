@@ -1,7 +1,7 @@
 {
   "id": "historia-it",
   "title": "Historia (Italiano)",
-  "version": "1.0.33",
+  "version": "1.0.34",
   "compatibility": {
     "minimum": 12,
     "verified": 14
@@ -25,11 +25,18 @@
   ],
   "description": "Italian translation packs for Historia.",
   "manifest": "https://raw.githubusercontent.com/digennarot/historia-it-dist/main/module.json",
-  "download": "https://github.com/digennarot/historia-it-dist/releases/download/v1.0.33/historia-it.zip",
+  "download": "https://github.com/digennarot/historia-it-dist/releases/download/v1.0.34/historia-it.zip",
   "esmodules": [
     "scripts/main.js"
   ],
   "packs": [
+    {
+      "name": "rules-it",
+      "label": "Regole (IT)",
+      "path": "packs/rules-it",
+      "type": "JournalEntry",
+      "system": "dnd5e"
+    },
     {
       "name": "species-it",
       "label": "Specie (IT)",
@@ -46,7 +53,7 @@
     },
     {
       "name": "ventures-it",
-      "label": "Imprese e Prominenze (IT)",
+      "label": "Venture e Risalti (IT)",
       "path": "packs/ventures-it",
       "type": "Item",
       "system": "dnd5e"
@@ -80,6 +87,13 @@
       "system": "dnd5e"
     },
     {
+      "name": "characters-it",
+      "label": "Personaggi di Historia (IT)",
+      "path": "packs/characters-it",
+      "type": "JournalEntry",
+      "system": "dnd5e"
+    },
+    {
       "name": "items-it",
       "label": "Equipaggiamento (IT)",
       "path": "packs/items-it",
@@ -102,6 +116,15 @@
       "packs": [],
       "folders": [
         {
+          "name": "Regole",
+          "sorting": "m",
+          "color": "#8d6e63",
+          "packs": [
+            "rules-it"
+          ],
+          "folders": []
+        },
+        {
           "name": "Personaggio",
           "sorting": "m",
           "color": "#2e7d32",
@@ -120,7 +143,8 @@
           "color": "#1565c0",
           "packs": [
             "factions-it",
-            "factions-and-careers-it"
+            "factions-and-careers-it",
+            "characters-it"
           ],
           "folders": []
         },
