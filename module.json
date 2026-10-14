@@ -1,7 +1,7 @@
 {
   "id": "historia-it",
   "title": "Historia (Italiano)",
-  "version": "1.0.36",
+  "version": "1.0.37",
   "compatibility": {
     "minimum": 12,
     "verified": 14
@@ -25,10 +25,22 @@
   ],
   "description": "Italian translation packs for Historia.",
   "manifest": "https://raw.githubusercontent.com/digennarot/historia-it-dist/main/module.json",
-  "download": "https://github.com/digennarot/historia-it-dist/releases/download/v1.0.36/historia-it.zip",
+  "download": "https://github.com/digennarot/historia-it-dist/releases/download/v1.0.37/historia-it.zip",
   "esmodules": [
     "scripts/main.js"
   ],
+  "flags": {
+    "dnd5e": {
+      "sourceBooks": {
+        "Historia": "Historia – Manuale Base"
+      },
+      "spellLists": [
+        "Compendium.historia-it.rules-it.JournalEntry.IncantesimiLst01.JournalEntryPage.IncantesMagus001",
+        "Compendium.historia-it.rules-it.JournalEntry.IncantesimiLst01.JournalEntryPage.IncantesMortif01",
+        "Compendium.historia-it.rules-it.JournalEntry.IncantesimiLst01.JournalEntryPage.IncantesSacerd01"
+      ]
+    }
+  },
   "packs": [
     {
       "name": "rules-it",
@@ -42,48 +54,96 @@
       "label": "Specie (IT)",
       "path": "packs/species-it",
       "type": "Item",
-      "system": "dnd5e"
+      "system": "dnd5e",
+      "flags": {
+        "dnd5e": {
+          "types": [
+            "race"
+          ]
+        }
+      }
     },
     {
       "name": "species-features-it",
       "label": "Tratti di Specie (IT)",
       "path": "packs/species-features-it",
       "type": "Item",
-      "system": "dnd5e"
-    },
-    {
-      "name": "ventures-it",
-      "label": "Venture e Risalti (IT)",
-      "path": "packs/ventures-it",
-      "type": "Item",
-      "system": "dnd5e"
+      "system": "dnd5e",
+      "flags": {
+        "dnd5e": {
+          "types": [
+            "feat",
+            "weapon"
+          ]
+        }
+      }
     },
     {
       "name": "professions-it",
       "label": "Mestieri (IT)",
       "path": "packs/professions-it",
       "type": "Item",
-      "system": "dnd5e"
+      "system": "dnd5e",
+      "flags": {
+        "dnd5e": {
+          "types": [
+            "class",
+            "subclass"
+          ]
+        }
+      }
     },
     {
       "name": "profession-features-it",
       "label": "Privilegi dei Mestieri (IT)",
       "path": "packs/profession-features-it",
       "type": "Item",
-      "system": "dnd5e"
+      "system": "dnd5e",
+      "flags": {
+        "dnd5e": {
+          "types": [
+            "consumable",
+            "feat",
+            "loot",
+            "weapon"
+          ]
+        }
+      }
     },
     {
-      "name": "factions-it",
-      "label": "Guida alle Fazioni (IT)",
-      "path": "packs/factions-it",
-      "type": "JournalEntry",
-      "system": "dnd5e"
+      "name": "ventures-it",
+      "label": "Venture e Risalti (IT)",
+      "path": "packs/ventures-it",
+      "type": "Item",
+      "system": "dnd5e",
+      "flags": {
+        "dnd5e": {
+          "types": [
+            "background",
+            "feat"
+          ]
+        }
+      }
     },
     {
       "name": "factions-and-careers-it",
       "label": "Fazioni e Carriere (IT)",
       "path": "packs/factions-and-careers-it",
       "type": "Item",
+      "system": "dnd5e",
+      "flags": {
+        "dnd5e": {
+          "types": [
+            "feat"
+          ]
+        }
+      }
+    },
+    {
+      "name": "factions-it",
+      "label": "Guida alle Fazioni (IT)",
+      "path": "packs/factions-it",
+      "type": "JournalEntry",
       "system": "dnd5e"
     },
     {
@@ -98,21 +158,47 @@
       "label": "Attori di Historia (IT)",
       "path": "packs/actors-it",
       "type": "Actor",
-      "system": "dnd5e"
+      "system": "dnd5e",
+      "flags": {
+        "dnd5e": {
+          "types": [
+            "npc"
+          ]
+        }
+      }
     },
     {
       "name": "items-it",
       "label": "Equipaggiamento (IT)",
       "path": "packs/items-it",
       "type": "Item",
-      "system": "dnd5e"
+      "system": "dnd5e",
+      "flags": {
+        "dnd5e": {
+          "types": [
+            "consumable",
+            "container",
+            "equipment",
+            "loot",
+            "tool",
+            "weapon"
+          ]
+        }
+      }
     },
     {
       "name": "spells-it",
       "label": "Incantesimi (IT)",
       "path": "packs/spells-it",
       "type": "Item",
-      "system": "dnd5e"
+      "system": "dnd5e",
+      "flags": {
+        "dnd5e": {
+          "types": [
+            "spell"
+          ]
+        }
+      }
     }
   ],
   "packFolders": [
@@ -138,9 +224,10 @@
           "packs": [
             "species-it",
             "species-features-it",
-            "ventures-it",
             "professions-it",
-            "profession-features-it"
+            "profession-features-it",
+            "ventures-it",
+            "factions-and-careers-it"
           ],
           "folders": []
         },
@@ -150,7 +237,6 @@
           "color": "#1565c0",
           "packs": [
             "factions-it",
-            "factions-and-careers-it",
             "characters-it",
             "actors-it"
           ],
